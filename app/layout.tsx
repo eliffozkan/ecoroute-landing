@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Syne, DM_Sans } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
+import Script from 'next/script'
 import './globals.css'
 
 const syne = Syne({ 
@@ -18,7 +19,32 @@ const dmSans = DM_Sans({
 export const metadata: Metadata = {
   title: 'EcoRoute - Go 4 a Greener Route',
   description: 'Bridging the gap between environmental intent and daily action. EcoRoute turns your sustainable habits into a rewarding global currency.',
-  generator: 'v0.app',
+  metadataBase: new URL('https://ecoroute-landing.vercel.app'),
+  alternates: {
+    canonical: '/',
+  },
+  openGraph: {
+    title: 'EcoRoute - Go 4 a Greener Route',
+    description: 'Bridging the gap between environmental intent and daily action. EcoRoute turns your sustainable habits into a rewarding global currency.',
+    url: 'https://ecoroute-landing.vercel.app',
+    siteName: 'EcoRoute',
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'EcoRoute - Go 4 a Greener Route',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'EcoRoute - Go 4 a Greener Route',
+    description: 'Bridging the gap between environmental intent and daily action. EcoRoute turns your sustainable habits into a rewarding global currency.',
+    images: ['/og-image.png'],
+  },
   icons: {
     icon: [
       {
@@ -38,6 +64,20 @@ export const metadata: Metadata = {
   },
 }
 
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'EcoRoute',
+  url: 'https://ecoroute-landing.vercel.app',
+  logo: 'https://ecoroute-landing.vercel.app/icon.svg',
+  description: 'Bridging the gap between environmental intent and daily action. EcoRoute turns your sustainable habits into a rewarding global currency.',
+  email: 'g4ecoroute@gmail.com',
+  foundingLocation: {
+    '@type': 'Place',
+    name: 'Ankara, Turkey',
+  },
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -45,6 +85,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${syne.variable} ${dmSans.variable} bg-bg`}>
+      <head>
+        <Script
+          id="json-ld"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body className="font-sans antialiased">
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
