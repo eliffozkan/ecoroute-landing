@@ -9,6 +9,7 @@ import { HowItWorks } from "@/components/how-it-works"
 import { Waitlist } from "@/components/waitlist"
 import { FAQ } from "@/components/faq"
 import { Footer } from "@/components/footer"
+import { CookieBanner } from "@/components/cookie-banner"
 
 export default function Home() {
   useEffect(() => {
@@ -42,6 +43,7 @@ export default function Home() {
       <Waitlist />
       <FAQ />
       <Footer />
+      <CookieBanner />
     </main>
   )
 }
