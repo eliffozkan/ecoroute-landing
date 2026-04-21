@@ -47,21 +47,21 @@ export function Waitlist() {
     <section id="waitlist" className="py-24 bg-surface">
       <div className="max-w-6xl mx-auto px-6">
         <div className="max-w-2xl mx-auto text-center">
-          <h2 className="font-heading font-bold text-4xl md:text-5xl text-text fade-up">
+          <h2 className="font-heading font-bold text-4xl md:text-5xl text-text">
             Don&apos;t Break the Chain.
           </h2>
-          <p className="mt-4 text-muted-foreground font-sans text-xl fade-up" style={{ transitionDelay: "100ms" }}>
+          <p className="mt-4 text-muted-foreground font-sans text-xl">
             Go 4 a Greener Route. — Join the waitlist and be first to access EcoRoute.
           </p>
 
           {status === "success" ? (
-            <div className="mt-8 fade-up">
+            <div className="mt-8">
               <p className="text-text font-sans text-lg">
                 You&apos;re on the list! <span className="text-accent">●</span> We&apos;ll be in touch.
               </p>
             </div>
           ) : (
-            <form onSubmit={handleSubmit} className="mt-8 fade-up" style={{ transitionDelay: "200ms" }}>
+            <form onSubmit={handleSubmit} className="mt-8">
               <div className="flex flex-col sm:flex-row gap-3">
                 <input
                   type="email"
