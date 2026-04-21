@@ -8,10 +8,9 @@ export function Waitlist() {
   const [status, setStatus] = useState<"idle" | "success" | "error">("idle")
   const [errorMessage, setErrorMessage] = useState("")
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
 
-    // Basic email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
     if (!emailRegex.test(email)) {
       setStatus("error")
@@ -25,8 +24,23 @@ export function Waitlist() {
       return
     }
 
-    // Simulate success
-    setStatus("success")
+    try {
+      const res = await fetch("https://formspree.io/f/xeevrevz", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email }),
+      })
+
+      if (res.ok) {
+        setStatus("success")
+      } else {
+        setStatus("error")
+        setErrorMessage("Something went wrong. Please try again.")
+      }
+    } catch {
+      setStatus("error")
+      setErrorMessage("Something went wrong. Please try again.")
+    }
   }
 
   return (
@@ -37,15 +51,13 @@ export function Waitlist() {
             Don&apos;t Break the Chain.
           </h2>
           <p className="mt-4 text-muted-foreground font-sans text-xl fade-up" style={{ transitionDelay: "100ms" }}>
-            Go 4 a Greener Route. — Join the waitlist and be first to access
-            EcoRoute.
+            Go 4 a Greener Route. — Join the waitlist and be first to access EcoRoute.
           </p>
 
           {status === "success" ? (
-            <div className="mt-8 fade-up" style={{ transitionDelay: "200ms" }}>
+            <div className="mt-8 fade-up">
               <p className="text-text font-sans text-lg">
-                You&apos;re on the list! <span className="text-accent">●</span> We&apos;ll be
-                in touch.
+                You&apos;re on the list! <span className="text-accent">●</span> We&apos;ll be in touch.
               </p>
             </div>
           ) : (
@@ -83,7 +95,7 @@ export function Waitlist() {
                     setAgreed(e.target.checked)
                     if (status === "error") setStatus("idle")
                   }}
-                  className="w-4 h-4 rounded border-accent/30 bg-bg text-accent focus:ring-accent focus:ring-offset-0"
+                  className="w-4 h-4 rounded border-accent/30 bg-bg"
                   style={{ accentColor: "#B4F8C8" }}
                 />
                 <span className="text-muted-foreground font-sans text-base">
