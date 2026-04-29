@@ -9,7 +9,7 @@ export function Footer() {
         <div className="grid md:grid-cols-3 gap-12">
           {/* Logo & Tagline */}
           <div className="fade-up">
-            <a href="#" className="font-heading font-bold text-xl">
+            <a href="/" className="font-heading font-bold text-xl">
               <span className="text-accent">Eco</span>
               <span className="text-text">Route</span>
             </a>
@@ -24,7 +24,7 @@ export function Footer() {
             <ul className="space-y-2">
               <li>
                 <a
-                  href="#"
+                  href="/privacy.html"
                   className="text-muted-foreground hover:text-text transition-colors font-sans"
                 >
                   Privacy Policy
@@ -32,7 +32,7 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="/terms.html"
                   className="text-muted-foreground hover:text-text transition-colors font-sans"
                 >
                   Terms of Service
@@ -40,7 +40,7 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="/cookies.html"
                   className="text-muted-foreground hover:text-text transition-colors font-sans"
                 >
                   Cookie Policy
@@ -54,21 +54,27 @@ export function Footer() {
             <h4 className="font-heading font-bold text-text mb-4">Connect</h4>
             <div className="flex gap-4 mb-4">
               <a
-                href="#"
+                href="https://github.com/eliffozkan"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-accent transition-colors"
                 aria-label="GitHub"
               >
                 <Github className="w-5 h-5" />
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/g4ecoroute?igsh=bW8wZXFlNmx6eXJu"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-accent transition-colors"
                 aria-label="Instagram"
               >
                 <Instagram className="w-5 h-5" />
               </a>
               <a
-                href="#"
+                href="https://linkedin.com/in/elif-özkan-347497391"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-accent transition-colors"
                 aria-label="LinkedIn"
               >
