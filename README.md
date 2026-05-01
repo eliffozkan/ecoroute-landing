@@ -1,7 +1,7 @@
 <div align="center">
   <h1>🌱 EcoRoute METU</h1>
-  <p><b>Less Waste. Smarter Canteens. A Greener METU.</b></p>
-  <p>Turning sustainable habits into a rewarding global currency.</p>
+  <p><b>Smarter Choices. Less Waste. A Greener METU.</b></p>
+  <p>Turning your sustainable habits into a rewarding global currency.</p>
 
   [![Next.js](https://img.shields.io/badge/Next.js-14-black?style=for-the-badge&logo=nextdotjs)](https://nextjs.org/)
   [![Tailwind CSS](https://img.shields.io/badge/Tailwind-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
@@ -13,28 +13,28 @@
 ## 🚀 Live Demo
 Check out the live landing page here: **[EcoRoute Vercel App](https://ecoroute-landing.vercel.app/)**
 
-## 💡 What is EcoRoute?
-EcoRoute is a sustainability platform designed specifically for the Middle East Technical University (METU) campus. We aim to bridge the gap between environmental intent and daily action by reducing food waste in university canteens through AI-driven stock prediction and rewarding students via the **EcoPuan** gamification system.
+## 💡 About This Project
+This repository contains the front-end source code for the **EcoRoute METU** landing page. EcoRoute is a student-focused sustainability platform developed specifically for the Middle East Technical University (METU) campus. 
 
-## ✨ Key Features
-*   **🤖 AI Stock Prediction:** Helps canteen managers cut over-ordering by analyzing past consumption data.
-*   **🏆 EcoPuan Gamification:** Students earn rewards for making sustainable and eco-friendly food choices.
-*   **📊 Real-time Dashboard:** Live inventory visibility and analytics for canteen staff.
-*   **⏳ Waitlist Integration:** Seamless early-access email collection using Tally.so.
-*   **🌙 Modern Dark UI:** Sleek, tech-forward design optimized for accessibility and performance.
+We aim to bridge the gap between environmental intent and daily action by empowering students and individuals to adopt sustainable habits, while rewarding their eco-friendly choices.
+
+*Note: This repository serves as a showcase of our product's web presence and UI/UX design, built for our upcoming launch and waitlist collection.*
+
+## ✨ Product Features Showcased
+*   **🌱 Empowering Sustainable Habits:** Guiding users to make environmentally conscious decisions in their daily campus life.
+*   **🏆 EcoPuan Gamification:** An engaging reward system that turns sustainable actions into redeemable points.
+*   **🤖 Smart Waste Reduction:** Utilizing AI-driven insights to optimize resource usage and minimize waste across the campus.
+*   **⏳ Waitlist Integration:** Active early-access email collection using Tally.so.
+*   **🌙 Modern Dark UI:** Sleek, tech-forward design optimized for performance and user experience.
 
 ## 🛠️ Tech Stack
 *   **Framework:** Next.js (React)
 *   **Styling:** Tailwind CSS
 *   **Icons:** Lucide React
 *   **Deployment:** Vercel
-*   **Analytics:** Google Analytics 4 (GA4) integrated
 
-## 💻 Getting Started Locally
-
-To run this project on your local machine, follow these steps:
-
-1. **Clone the repository:**
-   ```bash
-   git clone [https://github.com/eliffozkan/ecoroute-landing.git](https://github.com/eliffozkan/ecoroute-landing.git)
-   cd ecoroute-landing
+## 👩‍💻 Developed By
+**Elif Özkan**
+*   GitHub: [@eliffozkan](https://github.com/eliffozkan)
+*   LinkedIn: [Elif Özkan](https://linkedin.com/in/elif-özkan-347497391)
+*   Contact: g4ecoroute@gmail.com
